@@ -84,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'btredb',
         'USER': 'postgres',
-        'PASSWORD': 'student123',
+        'PASSWORD': 'MY DB PASSWORD',
         'HOST': 'localhost'
     }
 }
@@ -150,3 +150,9 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'MY GMAIL'
 EMAIL_HOST_PASSWORD = 'MY PASSWORD'
 EMAIL_USE_TLS = True
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
+
